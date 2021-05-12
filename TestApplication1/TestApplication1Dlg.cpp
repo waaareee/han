@@ -64,6 +64,7 @@ BEGIN_MESSAGE_MAP(CTestApplication1Dlg, CDialogEx)
 	ON_WM_SYSCOMMAND()
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
+	ON_BN_CLICKED(IDOK, &CTestApplication1Dlg::OnBnClickedOk)
 	ON_BN_CLICKED(IDCANCEL, &CTestApplication1Dlg::OnBnClickedCancel)
 END_MESSAGE_MAP()
 
@@ -153,6 +154,13 @@ HCURSOR CTestApplication1Dlg::OnQueryDragIcon()
 	return static_cast<HCURSOR>(m_hIcon);
 }
 
+
+
+void CTestApplication1Dlg::OnBnClickedOk()
+{
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+	CDialogEx::OnOK();
+}
 
 
 void CTestApplication1Dlg::OnBnClickedCancel()
